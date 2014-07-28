@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Storage</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <script src="javascripts/lib/underscore-min.js"></script>
+    <script src="javascripts/lib/jquery-1.10.2.min.js"></script>
+    <script src="javascripts/lib/handlebars-1.0.0.js"></script>
+    <script src="javascripts/lib/ember.js"></script>
+    <script src="javascripts/lib/ember-data.js"></script>
+
+    <script type="text/x-handlebars">
+      <header>
+        <h1>Habu Prototpye</h1>
+      </header>
+
+      <div>
+        {{outlet}}
+      </div>
+      <hr>
+      <footer>
+        <div id="copyright">
+          &copy;2014 UNM Informatics
+        </div>
+        <div id="style-control">
+          Habu Prototype v 0.0.1 (sidewinder)
+        </div>
+      </footer>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="index">
+      <section>
+      <p>This is a small application to experiment with local in-browser data storage.  This should run in browsers as well as within Apache Cordova-based applications.</p>
+      </section>
+    </script>
+
+    <script>
+
+      window.Habu = Ember.Application.create({
+        LOG_TRANSITIONS: true,
+        LOG_TRANSITIONS_INTERNAL: true,
+      });
+
+
+    </script>
+  </body>
+ </html>
