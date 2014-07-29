@@ -1,8 +1,89 @@
+
+@background-color: #eeeeee;
+@border: #aaaaaa;
+@border-background-color: #dddddd;
+@list-background-color: #ffffff;
+@row-even-background-color: #eeeeee;
+@row-odd-background-color: #ffffff;
+
 body {
-  padding: 50px;
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: @background-color;
 }
+
+header {
+  border: 1px solid @border;
+  border-radius: 5px;
+  background-color: @border-background-color;
+  font-style: bold;
+  font-size: larger;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border: 1px solid @border;
+  border-radius: 2px;
+  border-spacing: 0px;
+}
+
+tr:nth-child(even) {
+  background-color: @row-even-background-color;
+}
+
+tr:nth-child(odd) {
+  background-color: @row-odd-background-color;
+}
+
+th {
+  border-radius: 2px;
+  background-color: @border-background-color;
+}
+
+td {
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-size: smaller;
+}
+
+section {
+  background-color: @list-background-color;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#style-control {
+  text-align: right;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.element-image {
+  height: 100px;
+  width: 100px;
+}
+
+.element-container {}
 
 a {
   color: #00B7FF;
+}
+
+footer {
+  font-size: smaller;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
 }
