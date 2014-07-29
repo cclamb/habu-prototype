@@ -23,7 +23,7 @@
           &copy;2014 UNM Informatics
         </div>
         <div id="style-control">
-          Habu Prototype v 0.0.1 (sidewinder)
+          Habu Prototype v 0.0.1 ({{theme}})
         </div>
       </footer>
     </script>
@@ -68,6 +68,10 @@
       Habu.Router.map(function() {
         this.resource('one');
         this.resource('two')
+      });
+
+      Habu.ApplicationController = Ember.ObjectController.extend({
+        theme: 'sidewinder'
       });
 
       Habu.IndexController = Ember.ObjectController.extend({
