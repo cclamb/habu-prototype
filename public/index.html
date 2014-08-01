@@ -96,6 +96,132 @@
       </section>
       <nav>
         {{#link-to navigationState.previous}}previous{{/link-to}}
+        {{#link-to navigationState.next}}next{{/link-to}}
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="dimensions">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        dimensions >
+        {{#link-to 'savings'}}savings{{/link-to}} >
+        {{#link-to 'equipment'}}equipment{{/link-to}} >
+        {{#link-to 'proposal'}}proposal{{/link-to}} >
+        {{#link-to 'financing'}}financing{{/link-to}} >
+        {{#link-to 'payment'}}payment{{/link-to}} 
+      </nav>
+      <section>
+        <p>Questions.</p>
+      </section>
+      <nav>
+        {{#link-to navigationState.previous}}previous{{/link-to}}
+        {{#link-to navigationState.next}}next{{/link-to}}
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="savings">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
+        savings >
+        {{#link-to 'equipment'}}equipment{{/link-to}} >
+        {{#link-to 'proposal'}}proposal{{/link-to}} >
+        {{#link-to 'financing'}}financing{{/link-to}} >
+        {{#link-to 'payment'}}payment{{/link-to}} 
+      </nav>
+      <section>
+        <p>Questions.</p>
+      </section>
+      <nav>
+        {{#link-to navigationState.previous}}previous{{/link-to}}
+        {{#link-to navigationState.next}}next{{/link-to}}
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="equipment">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
+        {{#link-to 'savings'}}savings{{/link-to}} >
+        equipment >
+        {{#link-to 'proposal'}}proposal{{/link-to}} >
+        {{#link-to 'financing'}}financing{{/link-to}} >
+        {{#link-to 'payment'}}payment{{/link-to}} 
+      </nav>
+      <section>
+        <p>Questions.</p>
+      </section>
+      <nav>
+        {{#link-to navigationState.previous}}previous{{/link-to}}
+        {{#link-to navigationState.next}}next{{/link-to}}
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="proposal">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
+        {{#link-to 'savings'}}savings{{/link-to}} >
+        {{#link-to 'equipment'}}equipment{{/link-to}} >
+        proposal >
+        {{#link-to 'financing'}}financing{{/link-to}} >
+        {{#link-to 'payment'}}payment{{/link-to}} 
+      </nav>
+      <section>
+        <p>Questions.</p>
+      </section>
+      <nav>
+        {{#link-to navigationState.previous}}previous{{/link-to}}
+        {{#link-to navigationState.next}}next{{/link-to}}
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="financing">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
+        {{#link-to 'savings'}}savings{{/link-to}} >
+        {{#link-to 'equipment'}}equipment{{/link-to}} >
+        {{#link-to 'proposal'}}proposal{{/link-to}} >
+        financing >
+        {{#link-to 'payment'}}payment{{/link-to}} 
+      </nav>
+      <section>
+        <p>Questions.</p>
+      </section>
+      <nav>
+        {{#link-to navigationState.previous}}previous{{/link-to}}
+        {{#link-to navigationState.next}}next{{/link-to}}
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="payment">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
+        {{#link-to 'savings'}}savings{{/link-to}} >
+        {{#link-to 'equipment'}}equipment{{/link-to}} >
+        {{#link-to 'proposal'}}proposal{{/link-to}} >
+        {{#link-to 'financing'}}financing{{/link-to}} >
+        payment
+      </nav>
+      <section>
+        <p>Questions.</p>
+      </section>
+      <nav>
+        {{#link-to navigationState.previous}}previous{{/link-to}}
         next
       </nav>
     </script>
@@ -108,9 +234,15 @@
       });
 
       Habu.Router.map(function() {
-        this.resource('info'),
+        this.resource('info');
         this.resource('videos');
-        this.resource('questions')
+        this.resource('questions');
+        this.resource('dimensions');
+        this.resource('savings');
+        this.resource('equipment');
+        this.resource('proposal');
+        this.resource('financing');
+        this.resource('payment');
       });
 
       Habu.ApplicationController = Ember.ObjectController.extend({
@@ -119,25 +251,66 @@
 
       Habu.InfoController = Ember.ObjectController.extend({
         navigationState: {
-          next: 'videos',
-          previous: ''
+          previous: '',
+          next: 'videos'
         }
       });
 
       Habu.VideosController = Ember.ObjectController.extend({
         navigationState: {
-          next: 'questions',
-          previous: 'info'
+          previous: 'info',
+          next: 'questions'
         }
       });
 
       Habu.QuestionsController = Ember.ObjectController.extend({
         navigationState: {
-          next: '',
-          previous: 'videos'
+          previous: 'videos',
+          next: 'dimensions'
         }
       });
 
+      Habu.DimensionsController = Ember.ObjectController.extend({
+        navigationState: {
+          previous: 'questions',
+          next: 'savings'
+        }
+      });
+
+      Habu.SavingsController = Ember.ObjectController.extend({
+        navigationState: {
+          previous: 'dimensions',
+          next: 'equipment'
+        }
+      });
+
+      Habu.EquipmentController = Ember.ObjectController.extend({
+        navigationState: {
+          previous: 'savings',
+          next: 'proposal'
+        }
+      });
+
+      Habu.ProposalController = Ember.ObjectController.extend({
+        navigationState: {
+          previous: 'equipment',
+          next: 'financing'
+        }
+      });
+
+      Habu.FinancingController = Ember.ObjectController.extend({
+        navigationState: {
+          previous: 'proposal',
+          next: 'payment'
+        }
+      });
+
+      Habu.PaymentController = Ember.ObjectController.extend({
+        navigationState: {
+          previous: 'financing',
+          next: ''
+        }
+      });
 
     </script>
   </body>
