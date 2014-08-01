@@ -14,7 +14,7 @@
 
     <script type="text/x-handlebars">
       <header>
-        <h1>Habu Prototpye</h1>
+        <h1>Habu Prototype</h1>
       </header>
         {{outlet}}
       <hr>
@@ -30,7 +30,27 @@
 
     <script type="text/x-handlebars" data-template-name="index">
       <section>
-        <p>This is a small application to experiment with local in-browser data storage.  This should run in browsers as well as within Apache Cordova-based applications.</p>
+        <p>
+        Login.
+        </p>
+        {{#link-to 'info'}}enter{{/link-to}}
+      </section>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="info">
+      <nav id="crumbs">
+        info > 
+        {{#link-to 'videos'}}videos{{/link-to}} >
+        {{#link-to 'questions'}}questions{{/link-to}} 
+        {{#link-to 'index'}}dimensions{{/link-to}} >
+        {{#link-to 'index'}}savings{{/link-to}} >
+        {{#link-to 'index'}}equipment{{/link-to}} >
+        {{#link-to 'index'}}proposal{{/link-to}} >
+        {{#link-to 'index'}}financing{{/link-to}} >
+        {{#link-to 'index'}}payment{{/link-to}}       
+      </nav>
+      <section>
+        <p>Customer information.</p>
       </section>
       <nav>
         previous
@@ -38,9 +58,20 @@
       </nav>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="one">
+    <script type="text/x-handlebars" data-template-name="videos">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        videos > 
+        {{#link-to 'questions'}}questions{{/link-to}} >
+        {{#link-to 'info'}}dimensions{{/link-to}} >
+        {{#link-to 'info'}}savings{{/link-to}} >
+        {{#link-to 'info'}}equipment{{/link-to}} >
+        {{#link-to 'info'}}proposal{{/link-to}} >
+        {{#link-to 'info'}}financing{{/link-to}} >
+        {{#link-to 'info'}}payment{{/link-to}} 
+      </nav>
       <section>
-        <p>one</p>
+        <p>Videos.</p>
       </section>
       <nav>
         {{#link-to navigationState.previous}}previous{{/link-to}}
@@ -48,9 +79,20 @@
       </nav>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="two">
+    <script type="text/x-handlebars" data-template-name="questions">
+      <nav id="crumbs">
+        {{#link-to 'info'}}info{{/link-to}} > 
+        {{#link-to 'videos'}}videos{{/link-to}} > 
+        questions >
+        {{#link-to 'info'}}dimensions{{/link-to}} >
+        {{#link-to 'info'}}savings{{/link-to}} >
+        {{#link-to 'info'}}equipment{{/link-to}} >
+        {{#link-to 'info'}}proposal{{/link-to}} >
+        {{#link-to 'info'}}financing{{/link-to}} >
+        {{#link-to 'info'}}payment{{/link-to}} 
+      </nav>
       <section>
-        <p>two</p>
+        <p>Questions.</p>
       </section>
       <nav>
         {{#link-to navigationState.previous}}previous{{/link-to}}
@@ -66,32 +108,33 @@
       });
 
       Habu.Router.map(function() {
-        this.resource('one');
-        this.resource('two')
+        this.resource('info'),
+        this.resource('videos');
+        this.resource('questions')
       });
 
       Habu.ApplicationController = Ember.ObjectController.extend({
         theme: 'alien'
       });
 
-      Habu.IndexController = Ember.ObjectController.extend({
+      Habu.InfoController = Ember.ObjectController.extend({
         navigationState: {
-          next: 'one',
+          next: 'videos',
           previous: ''
         }
       });
 
-      Habu.OneController = Ember.ObjectController.extend({
+      Habu.VideosController = Ember.ObjectController.extend({
         navigationState: {
-          next: 'two',
-          previous: 'index'
+          next: 'questions',
+          previous: 'info'
         }
       });
 
-      Habu.TwoController = Ember.ObjectController.extend({
+      Habu.QuestionsController = Ember.ObjectController.extend({
         navigationState: {
           next: '',
-          previous: 'one'
+          previous: 'videos'
         }
       });
 
