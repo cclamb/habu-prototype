@@ -13,9 +13,9 @@
     <script src="javascripts/lib/ember-data.js"></script>
 
     <script type="text/x-handlebars">
-      <header>
+      {{! <header>
         <h1>Habu Prototype</h1>
-      </header>
+      </header> }}
         {{outlet}}
       <hr>
       <footer>
@@ -30,11 +30,19 @@
 
     <script type="text/x-handlebars" data-template-name="index">
       <section>
-        <p>
-        Login.
-        </p>
-        {{#link-to 'info'}}enter{{/link-to}}
+        <div>
+        username {{input type="text" value=username}}
+        password {{input type="password" value=password}}
+        </div>
+        <button {{action submit}}>Login</button>
       </section>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="body">
+      <header>
+        <h1>Habu Prototype</h1>
+      </header>
+        {{outlet}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="info">
@@ -234,19 +242,33 @@
       });
 
       Habu.Router.map(function() {
-        this.resource('info');
-        this.resource('videos');
-        this.resource('questions');
-        this.resource('dimensions');
-        this.resource('savings');
-        this.resource('equipment');
-        this.resource('proposal');
-        this.resource('financing');
-        this.resource('payment');
+        this.resource('body', function() {
+          this.resource('info');
+          this.resource('videos');
+          this.resource('questions');
+          this.resource('dimensions');
+          this.resource('savings');
+          this.resource('equipment');
+          this.resource('proposal');
+          this.resource('financing');
+          this.resource('payment');
+        });
       });
 
       Habu.ApplicationController = Ember.ObjectController.extend({
         theme: 'alien'
+      });
+
+      Habu.IndexController = Ember.ObjectController.extend({
+        username: 'your username',
+        password: '',
+
+        actions: {
+          submit: function() {
+            console.log('submitting...');
+            this.transitionToRoute('info');
+          }
+        }
       });
 
       Habu.InfoController = Ember.ObjectController.extend({
