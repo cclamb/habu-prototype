@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Storage</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Habu Prototype</title>
+    <link rel="stylesheet" href="stylesheets/blue-sky.css">
   </head>
   <body>
     <script src="javascripts/lib/underscore-min.js"></script>
@@ -29,6 +29,79 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="index">
+    <header>
+    <link rel="stylesheet" href="stylesheets/blue-sky-home.css">
+    <div class="logo">
+      Air Design<br>
+      Heating and Cooling
+    </div>
+
+    <div class="contact">
+      <p>(727) 331-0147</p>
+    </div>
+      
+    <div class="expertise">
+      HVAC Solutions Design
+    </div>
+    </header>
+
+    <div id="air-conditioning-tab" class="tab">
+    Air Conditioning
+    </div>
+
+    <div id="heating-tab" class="tab">
+    Heating
+    </div>
+
+    <div id="indoor-air-quality-tab" class="tab">
+    Indoor Air Quality
+    </div>
+
+    {{! <section>
+      This is the index.
+    </section>}}
+
+
+    <nav>
+      {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
+    </nav>
+    </script>
+
+     <script type="text/x-handlebars" data-template-name="informational">
+      <section>
+        {{outlet}}
+      </section>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="air-conditioning">
+    air-conditioning
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="heating">
+    heating
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="indoor-air-quality">
+    indoor-air-quality
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="about-us">
+    about-us
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="our-products">
+    our-products
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="how-it-works">
+    how-it-works
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="solutions">
+    solutions
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="login">
       <section>
         <div>
         username {{input type="text" value=username}}
@@ -242,6 +315,16 @@
       });
 
       Habu.Router.map(function() {
+        this.resource('informational', function() {
+          this.resource('air-conditioning');
+          this.resource('heating');
+          this.resource('indoor-air-quality');
+          this.resource('about-us');
+          this.resource('our-products');
+          this.resource('how-it-works');
+          this.resource('solutions');
+          this.resource('login');
+        });
         this.resource('body', function() {
           this.resource('info');
           this.resource('videos');
@@ -256,10 +339,10 @@
       });
 
       Habu.ApplicationController = Ember.ObjectController.extend({
-        theme: 'alien'
+        theme: 'blue sky'
       });
 
-      Habu.IndexController = Ember.ObjectController.extend({
+      Habu.LoginController = Ember.ObjectController.extend({
         username: 'your username',
         password: '',
 
