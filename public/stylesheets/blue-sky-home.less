@@ -5,31 +5,31 @@
 body {
 	color: @font-color;
 	background: @background-image no-repeat center center fixed;
-	background-size: 100%;
+	background-size: cover;
 }
 
 header {
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 
 .tab {
 	background-color: @tab-background-color;
 	color: blue;
 	position: relative;
-	width: 400px;
-	height: 100px;
+	width: 385px;
+	height: 75px;
 	text-align: left;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	vertical-align: middle;
 	text-indent: 20px;
-	line-height: 100px;
+	line-height: 75px;
 	font-size: 30pt;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	margin-left: -20px;
-	-moz-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
-	-webkit-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
-    transition: background-color 500ms;
+	-moz-transition: background-color 250ms; /* For Safari 3.1 to 6.0 */
+	-webkit-transition: background-color 250ms; /* For Safari 3.1 to 6.0 */
+    transition: background-color 250ms;
 }
 
 .tab a {
@@ -51,6 +51,11 @@ header {
 
 footer {
 	color: navy;
+	position:absolute;
+	bottom: 20px;
+	left: 0px;
+	width: 100%;
+
 }
 
 nav {
@@ -61,8 +66,15 @@ nav {
   -webkit-column-gap: 5px;
   column-count: 5;
   column-gap: 5px;	
-  margin: 0px;
-  padding: 0px;
+  /*margin: 0px;
+  padding: 0px; */
+  width: 100%;
+  position: absolute;
+  left: 00px;
+  bottom: 60px;
+/*  padding-left: 10px;
+  padding-right: 10px;
+  padding: 10px 0px 0px 10px; */
 }
 
 nav a {
@@ -76,9 +88,9 @@ nav div {
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
-	-moz-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
-	-webkit-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
-    transition: background-color 500ms;
+	-moz-transition: background-color 250ms; /* For Safari 3.1 to 6.0 */
+	-webkit-transition: background-color 250ms; /* For Safari 3.1 to 6.0 */
+    transition: background-color 250ms;
 }
 
 nav div:hover {
