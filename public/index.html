@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Habu Prototype</title>
     <link rel="stylesheet" href="stylesheets/blue-sky.css">
-    <link rel="stylesheet" href="stylesheets/blue-sky-home.css">
   </head>
   <body>
     <script src="javascripts/lib/underscore-min.js"></script>
@@ -14,10 +13,7 @@
     <script src="javascripts/lib/ember-data.js"></script>
 
     <script type="text/x-handlebars">
-      {{! <header>
-        <h1>Habu Prototype</h1>
-      </header> }}
-        {{outlet}}
+      {{outlet}}
       <footer>
       <hr>
         <div id="container">
@@ -32,46 +28,48 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="index">
-    <header>
-    
-    <div class="logo">
-      Air Design<br>
-      Heating and Cooling
-    </div>
+ 
+        <div class="login">
+          username {{input type="text" value=username}}<br>
+          password {{input type="password" value=password}}<br>
+          <button {{action submit}}>Login</button>
+        </div>
 
-    <div class="contact">
-      <p>(727) 331-0147</p>
-    </div>
-      
-    <div class="expertise">
-      HVAC Solutions Design
-    </div>
-    </header>
+    </script>
 
-    <div id="air-conditioning-tab" class="tab">
-    {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
-    </div>
+    <script type="text/x-handlebars" data-template-name="main">
+      <header>
+        <div class="logo">
+          Air Design<br>
+          Heating and Cooling
+        </div>
+        <div class="contact">
+          <p>(727) 331-0147</p>
+        </div>
+        <div class="expertise">
+          HVAC Solutions Design
+        </div>
+      </header>
 
-    <div id="heating-tab" class="tab">
-    {{#link-to 'air-conditioning'}}Heating{{/link-to}}
-    </div>
+      <div id="air-conditioning-tab" class="tab">
+      {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
+      </div>
 
-    <div id="indoor-air-quality-tab" class="tab">
-    {{#link-to 'air-conditioning'}}Indoor Air Quality{{/link-to}}
-    </div>
+      <div id="heating-tab" class="tab">
+      {{#link-to 'air-conditioning'}}Heating{{/link-to}}
+      </div>
 
-    {{! <section>
-      This is the index.
-    </section>}}
+      <div id="indoor-air-quality-tab" class="tab">
+      {{#link-to 'air-conditioning'}}Indoor Air Quality{{/link-to}}
+      </div>
 
-
-    <nav>
-      <div id="home">Air Design</div>
-      <div>{{#link-to 'about-us'}}About Us{{/link-to}}</div>
-      <div>{{#link-to 'our-products'}}Our Products{{/link-to}}</div>
-      <div>{{#link-to 'how-it-works'}}How It Works{{/link-to}}</div>
-      <div>{{#link-to 'solutions'}}Solutions{{/link-to}}</div>
-    </nav>
+      <nav>
+        <div id="home">Air Design</div>
+        <div>{{#link-to 'about-us'}}About Us{{/link-to}}</div>
+        <div>{{#link-to 'our-products'}}Our Products{{/link-to}}</div>
+        <div>{{#link-to 'how-it-works'}}How It Works{{/link-to}}</div>
+        <div>{{#link-to 'solutions'}}Solutions{{/link-to}}</div>
+      </nav>
     </script>
 
      <script type="text/x-handlebars" data-template-name="informational">
@@ -106,16 +104,6 @@
 
     <script type="text/x-handlebars" data-template-name="solutions">
     solutions
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="login">
-      <section>
-        <div>
-        username {{input type="text" value=username}}
-        password {{input type="password" value=password}}
-        </div>
-        <button {{action submit}}>Login</button>
-      </section>
     </script>
 
     <script type="text/x-handlebars" data-template-name="body">
@@ -323,6 +311,7 @@
 
       Habu.Router.map(function() {
         this.resource('informational', function() {
+          this.resource('main');
           this.resource('air-conditioning');
           this.resource('heating');
           this.resource('indoor-air-quality');
@@ -330,7 +319,6 @@
           this.resource('our-products');
           this.resource('how-it-works');
           this.resource('solutions');
-          this.resource('login');
         });
         this.resource('body', function() {
           this.resource('info');
@@ -349,14 +337,14 @@
         theme: 'blue sky'
       });
 
-      Habu.LoginController = Ember.ObjectController.extend({
+      Habu.IndexController = Ember.ObjectController.extend({
         username: 'your username',
         password: '',
 
         actions: {
           submit: function() {
             console.log('submitting...');
-            this.transitionToRoute('info');
+            this.transitionToRoute('main');
           }
         }
       });
