@@ -46,15 +46,15 @@
     </header>
 
     <div id="air-conditioning-tab" class="tab">
-    Air Conditioning
+    {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
     </div>
 
     <div id="heating-tab" class="tab">
-    Heating
+    {{#link-to 'air-conditioning'}}Heating{{/link-to}}
     </div>
 
     <div id="indoor-air-quality-tab" class="tab">
-    Indoor Air Quality
+    {{#link-to 'air-conditioning'}}Indoor Air Quality{{/link-to}}
     </div>
 
     {{! <section>
@@ -63,7 +63,11 @@
 
 
     <nav>
-      {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
+    <div id="home">Air Design</div>
+    <div>{{#link-to 'about-us'}}About Us{{/link-to}}</div>
+    <div>{{#link-to 'our-products'}}Our Products{{/link-to}}</div>
+    <div>{{#link-to 'how-it-works'}}How It Works{{/link-to}}</div>
+    <div>{{#link-to 'solutions'}}Solutions{{/link-to}}</div>
     </nav>
     </script>
 

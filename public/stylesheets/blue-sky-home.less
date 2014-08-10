@@ -16,7 +16,6 @@ header {
 	background-color: @tab-background-color;
 	color: blue;
 	position: relative;
-	/*left: 0px;*/
 	width: 400px;
 	height: 100px;
 	text-align: left;
@@ -28,21 +27,68 @@ header {
 	font-size: 30pt;
 	margin-bottom: 50px;
 	margin-left: -20px;
+	-moz-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
+	-webkit-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
+    transition: background-color 500ms;
 }
 
-
-#air-conditioning-tab {
-	/*background-color: rgba(200, 200, 256, 0.5);*/
+.tab a {
+	text-decoration: none;
+	color: blue;
 }
 
-#heating-tab {
-	/*background-color: rgba(200, 256, 200, 0.5);*/
+#air-conditioning-tab:hover {
+	background-color: rgb(256, 256, 256);
 }
 
-#indoor-air-quality-tab {
-	/*background-color: rgba(256, 256, 256, 0.5);*/
+#heating-tab:hover {
+	background-color: rgb(256, 256, 256);
+}
+
+#indoor-air-quality-tab:hover {
+	background-color: rgb(256, 256, 256);
 }
 
 footer {
 	color: navy;
+}
+
+nav {
+  font-size: large;
+  -moz-column-count: 5;
+  -moz-column-gap: 5px;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 5px;
+  column-count: 5;
+  column-gap: 5px;	
+  margin: 0px;
+  padding: 0px;
+}
+
+nav a {
+	text-decoration: none;
+	color: @font-color;
+}
+
+
+nav div {
+	background-color: rgba(0, 0, 256, 0.5);
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	-moz-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
+	-webkit-transition: background-color 500ms; /* For Safari 3.1 to 6.0 */
+    transition: background-color 500ms;
+}
+
+nav div:hover {
+	background-color: rgb(0, 0, 256);
+}
+
+nav div#home {
+	background-color: rgba(0, 153, 0, 0.5);
+}
+
+nav div#home:hover {
+	background-color: rgb(0, 153, 0);
 }
