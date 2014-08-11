@@ -37,7 +37,48 @@
 
     </script>
 
-    <script type="text/x-handlebars" data-template-name="main">
+    <script type="text/x-handlebars" data-template-name="body/index">
+      <header>
+        <div class="logo">
+          Air Design<br>
+          Heating and Cooling
+        </div>
+        <div class="contact">
+          <p>(727) 331-0147</p>
+        </div>
+        <div class="expertise">
+          Quote for David Whiteside
+        </div>
+      </header>
+
+      <section class="customer-information">
+      <h1>Customer Information</h1>
+        First Name: {{input type="text" value=firstname}}<br>
+        Last Name: {{input type="text" value=lastname}}<br>
+        Address: {{input type="text" value=address}}<br>
+        Address (line 2): {{input type="text" value=addressLine2}}<br>
+        City: {{input type="text" value=city}}<br>
+        State: {{input type="text" value=state}}<br>
+        Zip: {{input type="text" value=zip}}<br>
+        Phone: {{input type="text" value=phone}}<br>
+        Fax: {{input type="text" value=fax}}<br>
+        Email: {{input type="text" value=email}}
+      </section>
+
+      <nav id="body">
+        <div id="home">info</div>
+        <div>{{#link-to 'about-us'}}questions{{/link-to}}</div>
+        <div>{{#link-to 'our-products'}}requirements{{/link-to}}</div>
+        <div>{{#link-to 'how-it-works'}}dimentions{{/link-to}}</div>
+        <div>{{#link-to 'solutions'}}savings{{/link-to}}</div>
+        <div>{{#link-to 'about-us'}}equipment{{/link-to}}</div>
+        <div>{{#link-to 'our-products'}}proposal{{/link-to}}</div>
+        <div>{{#link-to 'how-it-works'}}financing{{/link-to}}</div>
+        <div>{{#link-to 'solutions'}}payment{{/link-to}}</div>
+      </nav>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="informational/index">
       <header>
         <div class="logo">
           Air Design<br>
@@ -72,12 +113,6 @@
       </nav>
     </script>
 
-     <script type="text/x-handlebars" data-template-name="informational">
-      <section>
-        {{outlet}}
-      </section>
-    </script>
-
     <script type="text/x-handlebars" data-template-name="air-conditioning">
     air-conditioning
     </script>
@@ -104,13 +139,6 @@
 
     <script type="text/x-handlebars" data-template-name="solutions">
     solutions
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="body">
-      <header>
-        <h1>Habu Prototype</h1>
-      </header>
-        {{outlet}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="info">
@@ -311,7 +339,6 @@
 
       Habu.Router.map(function() {
         this.resource('informational', function() {
-          this.resource('main');
           this.resource('air-conditioning');
           this.resource('heating');
           this.resource('indoor-air-quality');
@@ -337,6 +364,7 @@
         theme: 'blue sky'
       });
 
+
       Habu.IndexController = Ember.ObjectController.extend({
         username: 'your username',
         password: '',
@@ -344,7 +372,7 @@
         actions: {
           submit: function() {
             console.log('submitting...');
-            this.transitionToRoute('main');
+            this.transitionToRoute('body');
           }
         }
       });

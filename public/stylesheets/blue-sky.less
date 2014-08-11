@@ -147,6 +147,12 @@ header .expertise {
   text-align: right;
 }
 
+section.customer-information {
+  border-radius: 10px;
+  background-color: @tab-background-color;
+  padding: 10px;
+}
+
 nav {
   font-size: large;
   -moz-column-count: 5;
@@ -159,11 +165,21 @@ nav {
   padding: 0px; */
   width: 100%;
   position: absolute;
-  left: 00px;
+  left: 0px;
   bottom: 60px;
 /*  padding-left: 10px;
   padding-right: 10px;
   padding: 10px 0px 0px 10px; */
+}
+
+nav#body {
+  font-size: small;
+  -moz-column-count: 9;
+  -moz-column-gap: 5px;
+  -webkit-column-count: 9;
+  -webkit-column-gap: 5px;
+  column-count: 9;
+  column-gap: 5px; 
 }
 
 nav a {
@@ -179,7 +195,7 @@ nav div {
   text-align: center;
   -moz-transition: background-color 250ms; /* For Safari 3.1 to 6.0 */
   -webkit-transition: background-color 250ms; /* For Safari 3.1 to 6.0 */
-    transition: background-color 250ms;
+  transition: background-color 250ms;
 }
 
 nav div:hover {
@@ -224,12 +240,13 @@ nav div#home:hover {
   margin-right: auto;
   margin-left: auto;
   margin-top: 100px;
-  width: 220px;
+  width: 250px;
   height: 60px;
   padding: 20px;
   border-radius: 10px;
   font-size: larger;
   color: blue;
+  text-align: center;
 }
 
 #air-conditioning-tab:hover {
