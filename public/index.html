@@ -37,47 +37,6 @@
 
     </script>
 
-    <script type="text/x-handlebars" data-template-name="body/index">
-      <header>
-        <div class="logo">
-          Air Design<br>
-          Heating and Cooling
-        </div>
-        <div class="contact">
-          <p>(727) 331-0147</p>
-        </div>
-        <div class="expertise">
-          Quote for David Whiteside
-        </div>
-      </header>
-
-      <section class="customer-information">
-      <h1>Customer Information</h1>
-        First Name: {{input type="text" value=firstname}}<br>
-        Last Name: {{input type="text" value=lastname}}<br>
-        Address: {{input type="text" value=address}}<br>
-        Address (line 2): {{input type="text" value=addressLine2}}<br>
-        City: {{input type="text" value=city}}<br>
-        State: {{input type="text" value=state}}<br>
-        Zip: {{input type="text" value=zip}}<br>
-        Phone: {{input type="text" value=phone}}<br>
-        Fax: {{input type="text" value=fax}}<br>
-        Email: {{input type="text" value=email}}
-      </section>
-
-      <nav id="body">
-        <div id="home">info</div>
-        <div>{{#link-to 'about-us'}}questions{{/link-to}}</div>
-        <div>{{#link-to 'our-products'}}requirements{{/link-to}}</div>
-        <div>{{#link-to 'how-it-works'}}dimentions{{/link-to}}</div>
-        <div>{{#link-to 'solutions'}}savings{{/link-to}}</div>
-        <div>{{#link-to 'about-us'}}equipment{{/link-to}}</div>
-        <div>{{#link-to 'our-products'}}proposal{{/link-to}}</div>
-        <div>{{#link-to 'how-it-works'}}financing{{/link-to}}</div>
-        <div>{{#link-to 'solutions'}}payment{{/link-to}}</div>
-      </nav>
-    </script>
-
     <script type="text/x-handlebars" data-template-name="informational/index">
       <header>
         <div class="logo">
@@ -141,193 +100,139 @@
     solutions
     </script>
 
-    <script type="text/x-handlebars" data-template-name="info">
-      <nav id="crumbs">
-        info > 
-        {{#link-to 'videos'}}videos{{/link-to}} >
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}}       
+    <script type="text/x-handlebars" data-template-name="body">
+
+      {{outlet}}
+
+      <nav id="body">
+        <div id="home">{{#link-to 'body.index'}}info{{/link-to}}</div>
+        <div>{{#link-to 'questions'}}questions{{/link-to}}</div>
+        <div>{{#link-to 'requirements'}}requirements{{/link-to}}</div>
+        <div>{{#link-to 'dimensions'}}dimensions{{/link-to}}</div>
+        <div>{{#link-to 'savings'}}savings{{/link-to}}</div>
+        <div>{{#link-to 'equipment'}}equipment{{/link-to}}</div>
+        <div>{{#link-to 'proposal'}}proposal{{/link-to}}</div>
+        <div>{{#link-to 'financing'}}financing{{/link-to}}</div>
+        <div>{{#link-to 'payment'}}payment{{/link-to}}</div>
       </nav>
+
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="body/index">
+      <header>
+        <div class="logo">
+          Air Design<br>
+          Heating and Cooling
+        </div>
+        <div class="contact">
+          <p>(727) 331-0147</p>
+        </div>
+        <div class="expertise">
+          Quote for David Whiteside
+        </div>
+      </header>
+
+      <section class="data-container">
+
+        <div>
+          <h1>Customer Information</h1>
+          First Name: {{input type="text" value=firstname}}<br>
+          Last Name: {{input type="text" value=lastname}}<br>
+          Address: {{input type="text" value=address}}<br>
+          Address (line 2): {{input type="text" value=addressLine2}}<br>
+          City: {{input type="text" value=city}}<br>
+          State: {{input type="text" value=state}}<br>
+          Zip: {{input type="text" value=zip}}<br>
+          Phone: {{input type="text" value=phone}}<br>
+          Fax: {{input type="text" value=fax}}<br>
+          Email: {{input type="text" value=email}}
+        </div>
+
+        <div>
+          <figure>
+            <img src="images/bertmug.gif" alt=""/>
+            <figcaption>David Whiteside</figcaption>
+          </figure>
+        </div>
+
+      </section>
+
+      <section class="data-container">
+
+      <div>
+        <figure>
+          <img src="images/bertmug.gif" alt=""/>
+          <figcaption>From Front</figcaption>
+        </figure>
+      </div>
+
+      <div>
+        <figure>
+          <img src="images/bertmug.gif" alt=""/>
+          <figcaption>From Side</figcaption>
+        </figure>
+      </div>
+
+      </section>
+
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="requirements">
+    Requirements
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="info">
       <section>
         <p>Customer information.</p>
       </section>
-      <nav>
-        previous
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="videos">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        videos > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Videos.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="questions">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        questions >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Questions.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="dimensions">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        dimensions >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Dimensions.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="savings">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        savings >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Savings.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="equipment">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        equipment >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Equipment.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="proposal">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        proposal >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Proposal.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="financing">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        financing >
-        {{#link-to 'payment'}}payment{{/link-to}} 
-      </nav>
       <section>
         <p>Financing.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        {{#link-to navigationState.next}}next{{/link-to}}
-      </nav>
     </script>
 
     <script type="text/x-handlebars" data-template-name="payment">
-      <nav id="crumbs">
-        {{#link-to 'info'}}info{{/link-to}} > 
-        {{#link-to 'videos'}}videos{{/link-to}} > 
-        {{#link-to 'questions'}}questions{{/link-to}} >
-        {{#link-to 'dimensions'}}dimensions{{/link-to}} >
-        {{#link-to 'savings'}}savings{{/link-to}} >
-        {{#link-to 'equipment'}}equipment{{/link-to}} >
-        {{#link-to 'proposal'}}proposal{{/link-to}} >
-        {{#link-to 'financing'}}financing{{/link-to}} >
-        payment
-      </nav>
       <section>
         <p>Payment.</p>
       </section>
-      <nav>
-        {{#link-to navigationState.previous}}previous{{/link-to}}
-        next
-      </nav>
     </script>
 
     <script>
@@ -351,6 +256,7 @@
           this.resource('info');
           this.resource('videos');
           this.resource('questions');
+          this.resource('requirements');
           this.resource('dimensions');
           this.resource('savings');
           this.resource('equipment');
