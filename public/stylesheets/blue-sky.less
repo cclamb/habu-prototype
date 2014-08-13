@@ -19,7 +19,7 @@ body {
   background-size: cover;
 }
 
-table {
+/*table {
   width: 100%;
   border: 1px solid @border;
   border-radius: 2px;
@@ -43,19 +43,11 @@ td {
   text-align: center;
   padding: 5px 5px 5px 5px;
 }
-
+*/
 caption {
   caption-side: bottom;
   padding: 10px;
   font-size: smaller;
-}
-
-section {
-/*  background-color: @list-background-color;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  color: blue;*/
 }
 
 #style-control {
@@ -87,10 +79,6 @@ nav {
   column-gap: 20px;*/
 }
 
-#crumbs {
-  font-size: smaller;
-}
-
 footer {
   color: navy;
   position:absolute;
@@ -99,7 +87,7 @@ footer {
   width: 100%;
 }
 
-footer #container{
+#container{
   font-size: smaller;
   -moz-column-count: 2;
   -moz-column-gap: 20px;
@@ -132,16 +120,16 @@ header {
   margin-bottom: 50px;
 }
 
-header .logo {
+header.logo {
   text-align: left;
 }
 
-header .contact {
+header.contact {
   font-size: larger;
   text-align: center;
 }
 
-header .expertise {
+header.expertise {
   font-size: larger;
   font-weight: bold;
   text-align: right;
@@ -160,6 +148,33 @@ section.data-container {
 section.data-container div {
   float: left;
   width: 50%;
+}
+
+.small-box {
+  width: 40px;
+}
+
+section.question-container {
+  margin: 0px auto 20px auto;
+  border-radius: 10px;
+  background-color: @tab-background-color;
+  padding: 10px;
+  display: inline-block;
+  width: 90%;
+  color: blue;
+  font-size: larger;
+}
+
+section.question-container div {
+  width: 100%;
+}
+
+section.question-container input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: larger;
+  color: green;
 }
 
 nav {
@@ -211,11 +226,11 @@ nav div:hover {
   background-color: rgb(0, 0, 256);
 }
 
-nav div#home {
+#home {
   background-color: rgba(0, 153, 0, 0.5);
 }
 
-nav div#home:hover {
+#home:hover {
   background-color: rgb(0, 153, 0);
 }
 
@@ -268,4 +283,12 @@ nav div#home:hover {
 
 #indoor-air-quality-tab:hover {
   background-color: rgb(256, 256, 256);
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
 }

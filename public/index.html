@@ -102,23 +102,6 @@
 
     <script type="text/x-handlebars" data-template-name="body">
 
-      {{outlet}}
-
-      <nav id="body">
-        <div id="home">{{#link-to 'body.index'}}info{{/link-to}}</div>
-        <div>{{#link-to 'questions'}}questions{{/link-to}}</div>
-        <div>{{#link-to 'requirements'}}requirements{{/link-to}}</div>
-        <div>{{#link-to 'dimensions'}}dimensions{{/link-to}}</div>
-        <div>{{#link-to 'savings'}}savings{{/link-to}}</div>
-        <div>{{#link-to 'equipment'}}equipment{{/link-to}}</div>
-        <div>{{#link-to 'proposal'}}proposal{{/link-to}}</div>
-        <div>{{#link-to 'financing'}}financing{{/link-to}}</div>
-        <div>{{#link-to 'payment'}}payment{{/link-to}}</div>
-      </nav>
-
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="body/index">
       <header>
         <div class="logo">
           Air Design<br>
@@ -132,20 +115,70 @@
         </div>
       </header>
 
+      {{outlet}}
+
+      <nav id="body">
+        <div id="home">{{#link-to 'body.index'}}info{{/link-to}}</div>
+        <div>{{#link-to 'body.questions'}}questions{{/link-to}}</div>
+        <div>{{#link-to 'requirements'}}requirements{{/link-to}}</div>
+        <div>{{#link-to 'body.dimensions'}}dimensions{{/link-to}}</div>
+        <div>{{#link-to 'savings'}}savings{{/link-to}}</div>
+        <div>{{#link-to 'equipment'}}equipment{{/link-to}}</div>
+        <div>{{#link-to 'proposal'}}proposal{{/link-to}}</div>
+        <div>{{#link-to 'financing'}}financing{{/link-to}}</div>
+        <div>{{#link-to 'payment'}}payment{{/link-to}}</div>
+      </nav>
+
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="body/index">
+
       <section class="data-container">
 
         <div>
           <h1>Customer Information</h1>
-          First Name: {{input type="text" value=firstname}}<br>
-          Last Name: {{input type="text" value=lastname}}<br>
-          Address: {{input type="text" value=address}}<br>
-          Address (line 2): {{input type="text" value=addressLine2}}<br>
-          City: {{input type="text" value=city}}<br>
-          State: {{input type="text" value=state}}<br>
-          Zip: {{input type="text" value=zip}}<br>
-          Phone: {{input type="text" value=phone}}<br>
-          Fax: {{input type="text" value=fax}}<br>
-          Email: {{input type="text" value=email}}
+          <table>
+          <tr>
+            <td>First Name:</td>
+            <td>{{input type="text" value=firstname}}</td>
+          </tr>
+          <tr>
+            <td>Last Name:</td>
+            <td>{{input type="text" value=lastname}}</td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td>{{input type="text" value=address}}</td>
+          </tr>
+          <tr>
+            <td>Address (line 2):</td>
+            <td>{{input type="text" value=addressLine2}}</td>
+          </tr>
+          <tr>
+            <td>City:</td>
+            <td>{{input type="text" value=city}}</td>
+          </tr>
+          <tr>
+            <td>State:</td>
+            <td>{{input type="text" value=state}}</td>
+          </tr>
+          <tr>
+            <td>Zip:</td>
+            <td>{{input type="text" value=zip}}</td>
+          </tr>
+          <tr>
+            <td>Phone:</td>
+            <td>{{input type="text" value=phone}}</td>
+          </tr>
+          <tr>
+            <td>Fax:</td>
+            <td>{{input type="text" value=fax}}</td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td>{{input type="text" value=email}}</td>
+          </tr>
+          </table>
         </div>
 
         <div>
@@ -193,15 +226,69 @@
       </section>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="questions">
-      <section>
-        <p>Questions.</p>
+    <script type="text/x-handlebars" data-template-name="body/questions">
+      <section class="question-container">
+        <div>
+          <p class="question">
+            Does the customer like plants?
+          </p>
+          {{input type="text" value=plantsAnswer}}
+        </div>
+        <div>
+          <p class="question">
+            Does the customer like food?
+          </p>
+          {{input type="text" value=plantsAnswer}}
+        </div>
+        <div>
+          <p class="question">
+            Does the customer like water?
+          </p>
+          {{input type="text" value=plantsAnswer}}
+        </div>
       </section>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="dimensions">
-      <section>
-        <p>Dimensions.</p>
+    <script type="text/x-handlebars" data-template-name="body/dimensions">
+      <section class="data-container">
+
+        <div>
+          <p class="question">
+            What direction of the house has the most glass?<br>
+            <i>...select the arrow indicating the direction</i>
+          </p>
+          <p class="question">
+          Adjust the square footage of the window area:
+          </p>
+          <table>
+          <tr>
+            <td>E:</td>
+            <td>{{input class="small-box" type="text" value=eastSF}}</td>
+            <td>N:</td>
+            <td>{{input class="small-box" type="text" value=northSF}}</td>
+            <td>S:</td>
+            <td>{{input class="small-box" type="text" value=southSF}}</td>
+            <td>W:</td>
+            <td>{{input class="small-box" type="text" value=westSF}}</td>
+          </tr>
+          </table>
+          <p class="question">
+          What is the conditioned square footing in the house?
+          </p>
+          {{input type="text" value=conditionedSF}} (square feet)
+          <p class="question">
+          And the Number of residents?
+          </p>
+          {{input type="text" value=numberResidents}}
+          <p class="question">
+          The Average ceiling height?
+          </p>
+          {{input type="text" value=ceilingHeight}}
+        </div>
+
+        <div>
+        Graphs
+        <div>
       </section>
     </script>
 
@@ -255,9 +342,9 @@
         this.resource('body', function() {
           this.resource('info');
           this.resource('videos');
-          this.resource('questions');
+          this.resource('body.questions');
           this.resource('requirements');
-          this.resource('dimensions');
+          this.resource('body.dimensions');
           this.resource('savings');
           this.resource('equipment');
           this.resource('proposal');
@@ -297,7 +384,7 @@
         }
       });
 
-      Habu.QuestionsController = Ember.ObjectController.extend({
+      Habu.BodyQuestionsController = Ember.ObjectController.extend({
         navigationState: {
           previous: 'videos',
           next: 'dimensions'
