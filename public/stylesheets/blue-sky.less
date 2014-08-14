@@ -141,13 +141,24 @@ section.data-container {
   background-color: @tab-background-color;
   padding: 10px;
   display: inline-block;
+  display: table;
   width: 90%;
   color: blue;
+  white-space: nowrap;
 }
 
 section.data-container div {
   float: left;
-  width: 50%;
+  /*display: inline-block;*/
+  display: table-cell;
+  /*width: 50%;*/
+/*  width: 49%;                     
+  width: calc(50% - 8px);         
+  width: -moz-calc(50% - 8px);    
+  width: -webkit-calc(50% - 8px); */
+  /*display:inline-block;*/
+  /*width:50%;*/
+  /*margin:4px;*/
 }
 
 .small-box {
@@ -159,7 +170,7 @@ section.question-container {
   border-radius: 10px;
   background-color: @tab-background-color;
   padding: 10px;
-  display: inline-block;
+  /*display: inline-block;*/
   width: 90%;
   color: blue;
   font-size: larger;
@@ -261,9 +272,10 @@ nav div:hover {
 
 .login {
   background-color: rgba(256, 256, 256, 0.5);
-  margin-right: auto;
+/*  margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
+  margin-top: 100px;*/
+  margin: 100px auto 0px auto;
   width: 250px;
   height: 60px;
   padding: 20px;
