@@ -37,7 +37,7 @@
 
     </script>
 
-    <script type="text/x-handlebars" data-template-name="informational/index">
+    <script type="text/x-handlebars" data-template-name="informational">
       <header>
         <div class="logo">
           Air Design<br>
@@ -52,52 +52,157 @@
       </header>
 
       <div id="air-conditioning-tab" class="tab">
-      {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
+      {{#link-to 'informational.air-conditioning'}}Air Conditioning{{/link-to}}
       </div>
 
       <div id="heating-tab" class="tab">
-      {{#link-to 'air-conditioning'}}Heating{{/link-to}}
+      {{#link-to 'informational.heating'}}Heating{{/link-to}}
       </div>
 
       <div id="indoor-air-quality-tab" class="tab">
-      {{#link-to 'air-conditioning'}}Indoor Air Quality{{/link-to}}
+      {{#link-to 'informational.indoor-air-quality'}}Indoor Air Quality{{/link-to}}
       </div>
+
+      {{outlet}}
 
       <nav>
         <div id="home">Air Design</div>
-        <div>{{#link-to 'about-us'}}About Us{{/link-to}}</div>
-        <div>{{#link-to 'our-products'}}Our Products{{/link-to}}</div>
-        <div>{{#link-to 'how-it-works'}}How It Works{{/link-to}}</div>
-        <div>{{#link-to 'solutions'}}Solutions{{/link-to}}</div>
+        <div>{{#link-to 'informational.about-us'}}About Us{{/link-to}}</div>
+        <div>{{#link-to 'informational.our-products'}}Our Products{{/link-to}}</div>
+        <div>{{#link-to 'informational.how-it-works'}}How It Works{{/link-to}}</div>
+        <div>{{#link-to 'body'}}Solutions{{/link-to}}</div>
       </nav>
+
     </script>
 
-    <script type="text/x-handlebars" data-template-name="air-conditioning">
-    air-conditioning
+    <script type="text/x-handlebars" data-template-name="informational/index">
+
+      <section class="informational-index-container">
+        <p>Lorem ipsum dolor sit amet, eu cum graeco dolorum, duo in sint perpetua, habeo debet altera sed cu. Mazim audire cu duo. Has at agam veri epicuri. Alia pertinax vel te. Cu debitis vocibus noluisse usu, eos id dolores iracundia definitiones.</p>
+
+        <p>Vidit dicit ne pro, solet civibus pro cu. Quas habeo has at, eam agam altera quodsi ne. Ad qui aeque populo noster, ne has ullum integre dissentias, an facer constituto vix. Sonet lobortis suavitate ei mei, possit vocent sententiae cu has. Id wisi causae per.</p>
+
+        <p>Reque ubique vituperata ex per, errem evertitur mel ut. Ceteros minimum pericula pri in. Integre mediocrem et mei. Primis nostrum te qui. Et ferri errem argumentum vis. Labore ornatus suscipiantur an vim, duo modo postulant scripserit no, utinam mentitum offendit sed id.</p>
+
+        <p>Lorem ipsum dolor sit amet, eu cum graeco dolorum, duo in sint perpetua, habeo debet altera sed cu. Mazim audire cu duo. Has at agam veri epicuri. Alia pertinax vel te. Cu debitis vocibus noluisse usu, eos id dolores iracundia definitiones.</p>
+
+        <p>Vidit dicit ne pro, solet civibus pro cu. Quas habeo has at, eam agam altera quodsi ne. Ad qui aeque populo noster, ne has ullum integre dissentias, an facer constituto vix. Sonet lobortis suavitate ei mei, possit vocent sententiae cu has. Id wisi causae per.</p>
+
+        <p>Reque ubique vituperata ex per, errem evertitur mel ut. Ceteros minimum pericula pri in. Integre mediocrem et mei. Primis nostrum te qui. Et ferri errem argumentum vis. Labore ornatus suscipiantur an vim, duo modo postulant scripserit no, utinam mentitum offendit sed id.</p>
+      </section>
+
     </script>
 
-    <script type="text/x-handlebars" data-template-name="heating">
-    heating
+    <script type="text/x-handlebars" data-template-name="informational/air-conditioning">
+
+      <section class="informational-index-container">
+        <h1>Air Conditioning</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+
+        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+
+        <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
+
+        <p>Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+      </section>
+
     </script>
 
-    <script type="text/x-handlebars" data-template-name="indoor-air-quality">
-    indoor-air-quality
+    <script type="text/x-handlebars" data-template-name="informational/heating">
+
+      <section class="informational-index-container">
+        <h1>Heating</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+
+        <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</p>
+
+        <p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+
+        <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+
+        <p>Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.</p>
+
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut</p>
+      </section>
+
     </script>
 
-    <script type="text/x-handlebars" data-template-name="about-us">
-    about-us
+    <script type="text/x-handlebars" data-template-name="informational/indoor-air-quality">
+
+      <section class="informational-index-container">
+        <h1>Indoor Air Quality</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+
+        <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.</p>
+
+        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut</p>
+      </section>
+      
     </script>
 
-    <script type="text/x-handlebars" data-template-name="our-products">
-    our-products
+    <script type="text/x-handlebars" data-template-name="informational/about-us">
+
+      <section class="informational-index-container">
+        <h1>About Us</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+
+        <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi</p>
+      </section>
+
     </script>
 
-    <script type="text/x-handlebars" data-template-name="how-it-works">
-    how-it-works
+    <script type="text/x-handlebars" data-template-name="informational/our-products">
+
+      <section class="informational-index-container">
+        <h1>Our Products</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+
+        <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.</p>
+
+        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+
+        <p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet,</p>
+      </section>
+
     </script>
 
-    <script type="text/x-handlebars" data-template-name="solutions">
-    solutions
+    <script type="text/x-handlebars" data-template-name="informational/how-it-works">
+
+      <section class="informational-index-container">
+        <h1>How it Works</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+
+        <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
+
+        <p>Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+
+        <p>Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.</p>
+      </section>
+
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="informational/solutions">
+    solutions - this currently redirects to body/index
     </script>
 
     <script type="text/x-handlebars" data-template-name="body">
@@ -335,13 +440,13 @@
 
       Habu.Router.map(function() {
         this.resource('informational', function() {
-          this.resource('air-conditioning');
-          this.resource('heating');
-          this.resource('indoor-air-quality');
-          this.resource('about-us');
-          this.resource('our-products');
-          this.resource('how-it-works');
-          this.resource('solutions');
+          this.resource('informational.air-conditioning');
+          this.resource('informational.heating');
+          this.resource('informational.indoor-air-quality');
+          this.resource('informational.about-us');
+          this.resource('informational.our-products');
+          this.resource('informational.how-it-works');
+          this.resource('informational.solutions');
         });
         this.resource('body', function() {
           this.resource('info');
@@ -369,7 +474,7 @@
         actions: {
           submit: function() {
             console.log('submitting...');
-            this.transitionToRoute('body');
+            this.transitionToRoute('informational');
           }
         }
       });
