@@ -1,442 +1,516 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Habu Prototype</title>
-    <link rel="stylesheet" href="stylesheets/blue-sky.css">
-  </head>
-  <body>
-    <script src="javascripts/lib/underscore-min.js"></script>
-    <script src="javascripts/lib/jquery-1.10.2.min.js"></script>
-    <script src="javascripts/lib/handlebars-1.0.0.js"></script>
-    <script src="javascripts/lib/ember.js"></script>
-    <script src="javascripts/lib/ember-data.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title>Habu Prototype</title>
+		<link rel="stylesheet" href="stylesheets/foundation.min.css">
+		<link rel="stylesheet" href="stylesheets/normalize.css">
+		<link rel="stylesheet" href="stylesheets/layout.css">
+	</head>
+	<body>
+		<script src="javascripts/lib/underscore-min.js"></script>
+		<script src="javascripts/lib/jquery-1.10.2.min.js"></script>
+		<script src="javascripts/foundation.min.js"></script>
+		<script src="javascripts/lib/handlebars-1.0.0.js"></script>
+		<script src="javascripts/lib/ember.js"></script>
+		<script src="javascripts/lib/ember-data.js"></script>
 
-    <script type="text/x-handlebars">
-      {{outlet}}
-      <footer>
-      <hr>
-        <div id="container">
-          <div id="copyright">
-            &copy;2014 Watsco, Inc.
-          </div>
-          <div id="style-control">
-            Habu Prototype v 0.0.1 ({{theme}} theme)
-          </div>
-        </div>
-      </footer>
-    </script>
+		<script type="text/x-handlebars">
+			{{outlet}}
+			<!--
+			<footer>
+			<hr>
+				<div id="container">
+					<div id="copyright">
+						&copy;2014 Watsco, Inc.
+					</div>
+					<div id="style-control">
+						Habu Prototype v 0.0.1 ({{theme}} theme)
+					</div>
+				</div>
+			</footer>
+			-->
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="index">
+		<script type="text/x-handlebars" data-template-name="index">
  
-        <div class="login">
-          username {{input type="text" value=username}}<br>
-          password {{input type="password" value=password}}<br>
-          <button {{action submit}}>Login</button>
-        </div>
+ 			<div id="login-wrap">
+				<div class="login">
+					<h2>Sign In</h2>
+					username {{input type="text" value=username}}<br>
+					password {{input type="password" value=password}}<br>
+					<button {{action submit}}>Login</button>
+				</div>
+			</div>
 
-    </script>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="informational/index">
-      <header>
-        <div class="logo">
-          Air Design<br>
-          Heating and Cooling
-        </div>
-        <div class="contact">
-          <p>(727) 331-0147</p>
-        </div>
-        <div class="expertise">
-          HVAC Solutions Design
-        </div>
-      </header>
+		<script type="text/x-handlebars" data-template-name="informational/index">
+			<header>
+				<div class="logo">
+					<img src="images/logo.png" height="80px">
+				</div>
+				<div class="contact">
+					<p>(727) 331-0147</p>
+				</div>
+				<div class="expertise">
+					HVAC Solutions Design
+				</div>
+			</header>
 
-      <div id="air-conditioning-tab" class="tab">
-      {{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
-      </div>
+			<div id="air-conditioning-tab" class="tab">
+			{{#link-to 'air-conditioning'}}Air Conditioning{{/link-to}}
+			</div>
 
-      <div id="heating-tab" class="tab">
-      {{#link-to 'air-conditioning'}}Heating{{/link-to}}
-      </div>
+			<div id="heating-tab" class="tab">
+			{{#link-to 'air-conditioning'}}Heating{{/link-to}}
+			</div>
 
-      <div id="indoor-air-quality-tab" class="tab">
-      {{#link-to 'air-conditioning'}}Indoor Air Quality{{/link-to}}
-      </div>
+			<div id="indoor-air-quality-tab" class="tab">
+			{{#link-to 'air-conditioning'}}Indoor Air Quality{{/link-to}}
+			</div>
 
-      <nav>
-        <div id="home">Air Design</div>
-        <div>{{#link-to 'about-us'}}About Us{{/link-to}}</div>
-        <div>{{#link-to 'our-products'}}Our Products{{/link-to}}</div>
-        <div>{{#link-to 'how-it-works'}}How It Works{{/link-to}}</div>
-        <div>{{#link-to 'solutions'}}Solutions{{/link-to}}</div>
-      </nav>
-    </script>
+			<nav>
+				<div id="home">Air Design</div>
+				<div>{{#link-to 'about-us'}}About Us{{/link-to}}</div>
+				<div>{{#link-to 'our-products'}}Our Products{{/link-to}}</div>
+				<div>{{#link-to 'how-it-works'}}How It Works{{/link-to}}</div>
+				<div>{{#link-to 'solutions'}}Solutions{{/link-to}}</div>
+			</nav>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="air-conditioning">
-    air-conditioning
-    </script>
+		<script type="text/x-handlebars" data-template-name="air-conditioning">
+		air-conditioning
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="heating">
-    heating
-    </script>
+		<script type="text/x-handlebars" data-template-name="heating">
+		heating
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="indoor-air-quality">
-    indoor-air-quality
-    </script>
+		<script type="text/x-handlebars" data-template-name="indoor-air-quality">
+		indoor-air-quality
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="about-us">
-    about-us
-    </script>
+		<script type="text/x-handlebars" data-template-name="about-us">
+		about-us
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="our-products">
-    our-products
-    </script>
+		<script type="text/x-handlebars" data-template-name="our-products">
+		our-products
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="how-it-works">
-    how-it-works
-    </script>
+		<script type="text/x-handlebars" data-template-name="how-it-works">
+		how-it-works
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="solutions">
-    solutions
-    </script>
+		<script type="text/x-handlebars" data-template-name="solutions">
+		solutions
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="body">
+		<script type="text/x-handlebars" data-template-name="body">
 
-      <header>
-        <div class="logo">
-          Air Design<br>
-          Heating and Cooling
-        </div>
-        <div class="contact">
-          <p>(727) 331-0147</p>
-        </div>
-        <div class="expertise">
-          Quote for David Whiteside
-        </div>
-      </header>
+			<header>
+				<div class="row">
+					<div class="medium-12 column">
+						<div id="logo">
+							<img src="images/logo.png" width="255px">
+						</div>
+						<div id="contact">
+							<p>(727) 331-0147</p>
+						</div>
+						<div id="expertise">
+							Quote for David Whiteside
+						</div>
+					</div>
+				</div>
+			</header>
 
-      {{outlet}}
+			{{outlet}}
 
-      <nav id="body">
-        <div id="home">{{#link-to 'body.index'}}info{{/link-to}}</div>
-        <div>{{#link-to 'body.questions'}}questions{{/link-to}}</div>
-        <div>{{#link-to 'requirements'}}requirements{{/link-to}}</div>
-        <div>{{#link-to 'body.dimensions'}}dimensions{{/link-to}}</div>
-        <div>{{#link-to 'savings'}}savings{{/link-to}}</div>
-        <div>{{#link-to 'equipment'}}equipment{{/link-to}}</div>
-        <div>{{#link-to 'proposal'}}proposal{{/link-to}}</div>
-        <div>{{#link-to 'financing'}}financing{{/link-to}}</div>
-        <div>{{#link-to 'payment'}}payment{{/link-to}}</div>
-      </nav>
+			<nav class="breadcrumbs" id="body">
+				<div id="home">{{#link-to 'body.index'}}info{{/link-to}}</div>
+				<div>{{#link-to 'body.questions'}}questions{{/link-to}}</div>
+				<div>{{#link-to 'requirements'}}requirements{{/link-to}}</div>
+				<div>{{#link-to 'body.dimensions'}}dimensions{{/link-to}}</div>
+				<div>{{#link-to 'savings'}}savings{{/link-to}}</div>
+				<div>{{#link-to 'equipment'}}equipment{{/link-to}}</div>
+				<div>{{#link-to 'proposal'}}proposal{{/link-to}}</div>
+				<div>{{#link-to 'financing'}}financing{{/link-to}}</div>
+				<div>{{#link-to 'payment'}}payment{{/link-to}}</div>
+			</nav>
 
-    </script>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="body/index">
+		<script type="text/x-handlebars" data-template-name="body/index">
 
-      <section class="data-container">
+		<h1 id="customer-info">Customer Information</h1>
+		<div class="row">
+			<div class="medium-8 column">
+				<div class="row">
+					<div class="medium-6 column"><label>First Name</label>{{input type="text" value=firstname}}</div>
+					<div class="medium-6 column"><label>First Name</label>{{input type="text" value=lastname}}</div>
+				</div>
 
-        <div>
-          <h1>Customer Information</h1>
-          <table>
-          <tr>
-            <td>First Name:</td>
-            <td>{{input type="text" value=firstname}}</td>
-          </tr>
-          <tr>
-            <td>Last Name:</td>
-            <td>{{input type="text" value=lastname}}</td>
-          </tr>
-          <tr>
-            <td>Address:</td>
-            <td>{{input type="text" value=address}}</td>
-          </tr>
-          <tr>
-            <td>Address (line 2):</td>
-            <td>{{input type="text" value=addressLine2}}</td>
-          </tr>
-          <tr>
-            <td>City:</td>
-            <td>{{input type="text" value=city}}</td>
-          </tr>
-          <tr>
-            <td>State:</td>
-            <td>{{input type="text" value=state}}</td>
-          </tr>
-          <tr>
-            <td>Zip:</td>
-            <td>{{input type="text" value=zip}}</td>
-          </tr>
-          <tr>
-            <td>Phone:</td>
-            <td>{{input type="text" value=phone}}</td>
-          </tr>
-          <tr>
-            <td>Fax:</td>
-            <td>{{input type="text" value=fax}}</td>
-          </tr>
-          <tr>
-            <td>Email:</td>
-            <td>{{input type="text" value=email}}</td>
-          </tr>
-          </table>
-        </div>
+				<label>Address</label>
+				{{input type="text" value=address}}
 
-        <div>
-          <figure>
-            <img src="images/bertmug.gif" alt=""/>
-            <figcaption>David Whiteside</figcaption>
-          </figure>
-        </div>
+				<div class="row">
 
-      </section>
+					<div class="medium-5 column">
+						<label>City</label>
+						{{input type="text" value=city}}
+					</div>
 
-      <section class="data-container">
+					<div class="medium-5 column">
+						<label>State</label>
+						{{input type="text" value=state}}
+					</div>
 
-        <div>
-          <figure>
-            <img src="images/bertmug.gif" alt=""/>
-            <figcaption>From Front</figcaption>
-          </figure>
-        </div>
+					<div class="medium-2 column">
+						<label>Zip</label>
+						{{input type="text" value=zip}}
+					</div>
+				</div>
 
-        <div>
-          <figure>
-            <img src="images/bertmug.gif" alt=""/>
-            <figcaption>From Side</figcaption>
-          </figure>
-        </div>
+				<div class="row">
+					<div class="medium-6 column">
+						<label>Phone</label>
+						{{input type="text" value=phone}}
+					</div>
+					<div class="medium-6 column">
+						<label>Email</label>
+						{{input type="text" value=email}}
+					</div>
+				</div>
+			</div>
+			<div class="medium-4 column">
+				<img src="images/bertmug.gif" alt=""/>
+				<figcaption>David Whiteside</figcaption>
+			</div>
+		</div>
 
-      </section>
+		<!--
+			<section class="data-container">
 
-    </script>
+				<div>
+					<h1>Customer Information</h1>
+					<table>
+					<tr>
+						<td>First Name:</td>
+						<td>{{input type="text" value=firstname}}</td>
+					</tr>
+					<tr>
+						<td>Last Name:</td>
+						<td>{{input type="text" value=lastname}}</td>
+					</tr>
+					<tr>
+						<td>Address:</td>
+						<td>{{input type="text" value=address}}</td>
+					</tr>
+					<tr>
+						<td>Address (line 2):</td>
+						<td>{{input type="text" value=addressLine2}}</td>
+					</tr>
+					<tr>
+						<td>City:</td>
+						<td>{{input type="text" value=city}}</td>
+					</tr>
+					<tr>
+						<td>State:</td>
+						<td>{{input type="text" value=state}}</td>
+					</tr>
+					<tr>
+						<td>Zip:</td>
+						<td>{{input type="text" value=zip}}</td>
+					</tr>
+					<tr>
+						<td>Phone:</td>
+						<td>{{input type="text" value=phone}}</td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td>{{input type="text" value=fax}}</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td>{{input type="text" value=email}}</td>
+					</tr>
+					</table>
+				</div>
 
-    <script type="text/x-handlebars" data-template-name="requirements">
+				<div>
+					<figure>
+						<img src="images/bertmug.gif" alt=""/>
+						<figcaption>David Whiteside</figcaption>
+					</figure>
+				</div>
 
-      <section class="data-container">
-        Requirements
-      </section>
+			</section>
 
-    </script>
+			<section class="data-container">
 
-    <script type="text/x-handlebars" data-template-name="info">
-      <section>
-        <p>Customer information.</p>
-      </section>
-    </script>
+				<div>
+					<figure>
+						<img src="images/bertmug.gif" alt=""/>
+						<figcaption>From Front</figcaption>
+					</figure>
+				</div>
 
-    <script type="text/x-handlebars" data-template-name="videos">
-      <section>
-        <p>Videos.</p>
-      </section>
-    </script>
+				<div>
+					<figure>
+						<img src="images/bertmug.gif" alt=""/>
+						<figcaption>From Side</figcaption>
+					</figure>
+				</div>
 
-    <script type="text/x-handlebars" data-template-name="body/questions">
-      <section class="question-container">
-        <div>
-          <p class="question">
-            Does the customer like plants?
-          </p>
-          {{input type="text" value=plantsAnswer}}
-        </div>
-        <div>
-          <p class="question">
-            Does the customer like food?
-          </p>
-          {{input type="text" value=plantsAnswer}}
-        </div>
-        <div>
-          <p class="question">
-            Does the customer like water?
-          </p>
-          {{input type="text" value=plantsAnswer}}
-        </div>
-      </section>
-    </script>
+			</section>
+			-->
 
-    <script type="text/x-handlebars" data-template-name="body/dimensions">
-      <section class="data-container">
+		</script>
 
-        <div>
-          <p class="question">
-            What direction of the house has the most glass?<br>
-            <i>...select the arrow indicating the direction</i>
-          </p>
-          <p class="question">
-          Adjust the square footage of the window area:
-          </p>
-          <table>
-          <tr>
-            <td>E:</td>
-            <td>{{input class="small-box" type="text" value=eastSF}}</td>
-            <td>N:</td>
-            <td>{{input class="small-box" type="text" value=northSF}}</td>
-            <td>S:</td>
-            <td>{{input class="small-box" type="text" value=southSF}}</td>
-            <td>W:</td>
-            <td>{{input class="small-box" type="text" value=westSF}}</td>
-          </tr>
-          </table>
-          <p class="question">
-          What is the conditioned square footing in the house?
-          </p>
-          {{input type="text" value=conditionedSF}} (square feet)
-          <p class="question">
-          And the Number of residents?
-          </p>
-          {{input type="text" value=numberResidents}}
-          <p class="question">
-          The Average ceiling height?
-          </p>
-          {{input type="text" value=ceilingHeight}}
-        </div>
+		<script type="text/x-handlebars" data-template-name="requirements">
 
-        <div>
-        Graphs
-        <div>
-      </section>
-    </script>
+			<section class="data-container">
+				Requirements
+			</section>
 
-    <script type="text/x-handlebars" data-template-name="savings">
-      <section>
-        <p>Savings.</p>
-      </section>
-    </script>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="equipment">
-      <section>
-        <p>Equipment.</p>
-      </section>
-    </script>
+		<script type="text/x-handlebars" data-template-name="info">
+			<section>
+				<p>Customer information.</p>
+			</section>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="proposal">
-      <section>
-        <p>Proposal.</p>
-      </section>
-    </script>
+		<script type="text/x-handlebars" data-template-name="videos">
+			<section>
+				<p>Videos.</p>
+			</section>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="financing">
-      <section>
-        <p>Financing.</p>
-      </section>
-    </script>
+		<script type="text/x-handlebars" data-template-name="body/questions">
+			<div class="row">
+				<section class="question-container medium-12 column">
+					<div>
+						<p class="question">
+							Does the customer like plants?
+						</p>
+						{{input type="text" value=plantsAnswer}}
+					</div>
+					<div>
+						<p class="question">
+							Does the customer like food?
+						</p>
+						{{input type="text" value=plantsAnswer}}
+					</div>
+					<div>
+						<p class="question">
+							Does the customer like water?
+						</p>
+						{{input type="text" value=plantsAnswer}}
+					</div>
+				</section>
+			</div>
+		</script>
 
-    <script type="text/x-handlebars" data-template-name="payment">
-      <section>
-        <p>Payment.</p>
-      </section>
-    </script>
+		<script type="text/x-handlebars" data-template-name="body/dimensions">
+			<div class="row">
+				<section class="data-container">
 
-    <script>
+					<div class="medium-8 column">
+						<p class="question">
+							What direction of the house has the most glass?<br>
+							<i>...select the arrow indicating the direction</i>
+						</p>
+						<p class="question">
+						Adjust the square footage of the window area:
+						</p>
 
-      window.Habu = Ember.Application.create({
-        LOG_TRANSITIONS: true,
-        LOG_TRANSITIONS_INTERNAL: true,
-      });
+						<div class="row">
+							<div class="medium-3 column"><label>E:</label>{{input class="small-box" type="text" value=eastSF}}</div>
+							<div class="medium-3 column"><label>N:</label>{{input class="small-box" type="text" value=northSF}}</div>
+							<div class="medium-3 column"><label>S:</label>{{input class="small-box" type="text" value=southSF}}</div>
+							<div class="medium-3 column"><label>W:</label>{{input class="small-box" type="text" value=westSF}}</div>
+						</div>
 
-      Habu.Router.map(function() {
-        this.resource('informational', function() {
-          this.resource('air-conditioning');
-          this.resource('heating');
-          this.resource('indoor-air-quality');
-          this.resource('about-us');
-          this.resource('our-products');
-          this.resource('how-it-works');
-          this.resource('solutions');
-        });
-        this.resource('body', function() {
-          this.resource('info');
-          this.resource('videos');
-          this.resource('body.questions');
-          this.resource('requirements');
-          this.resource('body.dimensions');
-          this.resource('savings');
-          this.resource('equipment');
-          this.resource('proposal');
-          this.resource('financing');
-          this.resource('payment');
-        });
-      });
-
-      Habu.ApplicationController = Ember.ObjectController.extend({
-        theme: 'blue sky'
-      });
+						<!--
+						<table>
+						<tr>
+							<td>E:</td>
+							<td>{{input class="small-box" type="text" value=eastSF}}</td>
+							<td>N:</td>
+							<td>{{input class="small-box" type="text" value=northSF}}</td>
+							<td>S:</td>
+							<td>{{input class="small-box" type="text" value=southSF}}</td>
+							<td>W:</td>
+							<td>{{input class="small-box" type="text" value=westSF}}</td>
+						</tr>
+						</table>
+						-->
 
 
-      Habu.IndexController = Ember.ObjectController.extend({
-        username: 'your username',
-        password: '',
+						<p class="question">
+						What is the conditioned square footing in the house?
+						</p>
+						{{input type="text" value=conditionedSF}} (square feet)
+						<p class="question">
+						And the Number of residents?
+						</p>
+						{{input type="text" value=numberResidents}}
+						<p class="question">
+						The Average ceiling height?
+						</p>
+						{{input type="text" value=ceilingHeight}}
+					</div>
 
-        actions: {
-          submit: function() {
-            console.log('submitting...');
-            this.transitionToRoute('body');
-          }
-        }
-      });
+					<div class="medium-4 column">
+					Graphs
+					<div>
+				</section>
+			</div>
+		</script>
 
-      Habu.InfoController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: '',
-          next: 'videos'
-        }
-      });
+		<script type="text/x-handlebars" data-template-name="savings">
+			<section>
+				<p>Savings.</p>
+			</section>
+		</script>
 
-      Habu.VideosController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'info',
-          next: 'questions'
-        }
-      });
+		<script type="text/x-handlebars" data-template-name="equipment">
+			<section>
+				<p>Equipment.</p>
+			</section>
+		</script>
 
-      Habu.BodyQuestionsController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'videos',
-          next: 'dimensions'
-        }
-      });
+		<script type="text/x-handlebars" data-template-name="proposal">
+			<section>
+				<p>Proposal.</p>
+			</section>
+		</script>
 
-      Habu.DimensionsController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'questions',
-          next: 'savings'
-        }
-      });
+		<script type="text/x-handlebars" data-template-name="financing">
+			<section>
+				<p>Financing.</p>
+			</section>
+		</script>
 
-      Habu.SavingsController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'dimensions',
-          next: 'equipment'
-        }
-      });
+		<script type="text/x-handlebars" data-template-name="payment">
+			<section>
+				<p>Payment.</p>
+			</section>
+		</script>
 
-      Habu.EquipmentController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'savings',
-          next: 'proposal'
-        }
-      });
+		<script>
 
-      Habu.ProposalController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'equipment',
-          next: 'financing'
-        }
-      });
+			window.Habu = Ember.Application.create({
+				LOG_TRANSITIONS: true,
+				LOG_TRANSITIONS_INTERNAL: true,
+			});
 
-      Habu.FinancingController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'proposal',
-          next: 'payment'
-        }
-      });
+			Habu.Router.map(function() {
+				this.resource('informational', function() {
+					this.resource('air-conditioning');
+					this.resource('heating');
+					this.resource('indoor-air-quality');
+					this.resource('about-us');
+					this.resource('our-products');
+					this.resource('how-it-works');
+					this.resource('solutions');
+				});
+				this.resource('body', function() {
+					this.resource('info');
+					this.resource('videos');
+					this.resource('body.questions');
+					this.resource('requirements');
+					this.resource('body.dimensions');
+					this.resource('savings');
+					this.resource('equipment');
+					this.resource('proposal');
+					this.resource('financing');
+					this.resource('payment');
+				});
+			});
 
-      Habu.PaymentController = Ember.ObjectController.extend({
-        navigationState: {
-          previous: 'financing',
-          next: ''
-        }
-      });
+			Habu.ApplicationController = Ember.ObjectController.extend({
+				theme: 'blue sky'
+			});
 
-    </script>
-  </body>
+
+			Habu.IndexController = Ember.ObjectController.extend({
+				username: 'your username',
+				password: '',
+
+				actions: {
+					submit: function() {
+						console.log('submitting...');
+						this.transitionToRoute('body');
+					}
+				}
+			});
+
+			Habu.InfoController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: '',
+					next: 'videos'
+				}
+			});
+
+			Habu.VideosController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'info',
+					next: 'questions'
+				}
+			});
+
+			Habu.BodyQuestionsController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'videos',
+					next: 'dimensions'
+				}
+			});
+
+			Habu.DimensionsController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'questions',
+					next: 'savings'
+				}
+			});
+
+			Habu.SavingsController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'dimensions',
+					next: 'equipment'
+				}
+			});
+
+			Habu.EquipmentController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'savings',
+					next: 'proposal'
+				}
+			});
+
+			Habu.ProposalController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'equipment',
+					next: 'financing'
+				}
+			});
+
+			Habu.FinancingController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'proposal',
+					next: 'payment'
+				}
+			});
+
+			Habu.PaymentController = Ember.ObjectController.extend({
+				navigationState: {
+					previous: 'financing',
+					next: ''
+				}
+			});
+
+		</script>
+	</body>
  </html>
