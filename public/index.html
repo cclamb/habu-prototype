@@ -17,19 +17,6 @@
 
 		<script type="text/x-handlebars">
 			{{outlet}}
-			<!--
-			<footer>
-			<hr>
-				<div id="container">
-					<div id="copyright">
-						&copy;2014 Watsco, Inc.
-					</div>
-					<div id="style-control">
-						Habu Prototype v 0.0.1 ({{theme}} theme)
-					</div>
-				</div>
-			</footer>
-			-->
 		</script>
 
 		<script type="text/x-handlebars" data-template-name="index">
@@ -45,8 +32,41 @@
 
 		</script>
 
+    <script type="text/x-handlebars" data-template-name="informational">
+
+      <header>
+        <div class="row">
+          <div class="medium-12 column">
+            <div id="logo">
+              <img src="images/logo.png" width="255px">
+            </div>
+            <div id="contact">
+              <p>(727) 331-0147</p>
+            </div>
+            <div id="expertise">
+              HVAC Solutions Design
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {{outlet}}
+
+      <nav class="breadcrumbs" id="body">
+        <div id="home">Air Design</div>
+        <div>{{#link-to 'informational.air-conditioning'}}Conditioning{{/link-to}}</div>
+        <div>{{#link-to 'informational.heating'}}Heating{{/link-to}}</div>
+        <div>{{#link-to 'informational.indoor-air-quality'}}Air Quality{{/link-to}}</div>
+        <div>{{#link-to 'informational.about-us'}}About Us{{/link-to}}</div>
+        <div>{{#link-to 'informational.our-products'}}Our Products{{/link-to}}</div>
+        <div>{{#link-to 'informational.how-it-works'}}How It Works{{/link-to}}</div>
+        <div>{{#link-to 'body'}}Solutions{{/link-to}}</div>
+      </nav>
+
+    </script>
+
 		<script type="text/x-handlebars" data-template-name="informational/index">
-			<section class="informational-index-container">
+			<section class="row">
 				<p>Lorem ipsum dolor sit amet, eu cum graeco dolorum, duo in sint perpetua, habeo debet altera sed cu. Mazim audire cu duo. Has at agam veri epicuri. Alia pertinax vel te. Cu debitis vocibus noluisse usu, eos id dolores iracundia definitiones.</p>
 
 				<p>Vidit dicit ne pro, solet civibus pro cu. Quas habeo has at, eam agam altera quodsi ne. Ad qui aeque populo noster, ne has ullum integre dissentias, an facer constituto vix. Sonet lobortis suavitate ei mei, possit vocent sententiae cu has. Id wisi causae per.</p>
@@ -63,7 +83,7 @@
 
 		<script type="text/x-handlebars" data-template-name="informational/air-conditioning">
 
-    <section class="informational-index-container">
+    <section class="row">
         <h1>Air Conditioning</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
@@ -79,7 +99,7 @@
 
     <script type="text/x-handlebars" data-template-name="informational/heating">
 
-      <section class="informational-index-container">
+      <section class="row">
         <h1>Heating</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
@@ -101,7 +121,7 @@
 
     <script type="text/x-handlebars" data-template-name="informational/indoor-air-quality">
 
-      <section class="informational-index-container">
+      <section class="row">
         <h1>Indoor Air Quality</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
@@ -119,7 +139,7 @@
 
     <script type="text/x-handlebars" data-template-name="informational/about-us">
 
-      <section class="informational-index-container">
+      <section class="row">
         <h1>About Us</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
@@ -135,7 +155,7 @@
 
     <script type="text/x-handlebars" data-template-name="informational/our-products">
 
-      <section class="informational-index-container">
+      <section class="row">
         <h1>Our Products</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
@@ -155,7 +175,7 @@
 
     <script type="text/x-handlebars" data-template-name="informational/how-it-works">
 
-      <section class="informational-index-container">
+      <section class="row">
         <h1>How it Works</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
@@ -209,128 +229,51 @@
 
 		<script type="text/x-handlebars" data-template-name="body/index">
 
-		<h1 id="customer-info">Customer Information</h1>
-		<div class="row">
-			<div class="medium-8 column">
-				<div class="row">
-					<div class="medium-6 column"><label>First Name</label>{{input type="text" value=firstname}}</div>
-					<div class="medium-6 column"><label>First Name</label>{{input type="text" value=lastname}}</div>
-				</div>
+  		<h1 id="customer-info">Customer Information</h1>
+  		<div class="row">
+  			<div class="medium-8 column">
+  				<div class="row">
+  					<div class="medium-6 column"><label>First Name</label>{{input type="text" value=firstname}}</div>
+  					<div class="medium-6 column"><label>First Name</label>{{input type="text" value=lastname}}</div>
+  				</div>
 
-				<label>Address</label>
-				{{input type="text" value=address}}
+  				<label>Address</label>
+  				{{input type="text" value=address}}
 
-				<div class="row">
+  				<div class="row">
 
-					<div class="medium-5 column">
-						<label>City</label>
-						{{input type="text" value=city}}
-					</div>
+  					<div class="medium-5 column">
+  						<label>City</label>
+  						{{input type="text" value=city}}
+  					</div>
 
-					<div class="medium-5 column">
-						<label>State</label>
-						{{input type="text" value=state}}
-					</div>
+  					<div class="medium-5 column">
+  						<label>State</label>
+  						{{input type="text" value=state}}
+  					</div>
 
-					<div class="medium-2 column">
-						<label>Zip</label>
-						{{input type="text" value=zip}}
-					</div>
-				</div>
+  					<div class="medium-2 column">
+  						<label>Zip</label>
+  						{{input type="text" value=zip}}
+  					</div>
+  				</div>
 
-				<div class="row">
-					<div class="medium-6 column">
-						<label>Phone</label>
-						{{input type="text" value=phone}}
-					</div>
-					<div class="medium-6 column">
-						<label>Email</label>
-						{{input type="text" value=email}}
-					</div>
-				</div>
-			</div>
-			<div class="medium-4 column">
-				<img src="images/bertmug.gif" alt=""/>
-				<figcaption>David Whiteside</figcaption>
-			</div>
-		</div>
-
-		<!--
-			<section class="data-container">
-
-				<div>
-					<h1>Customer Information</h1>
-					<table>
-					<tr>
-						<td>First Name:</td>
-						<td>{{input type="text" value=firstname}}</td>
-					</tr>
-					<tr>
-						<td>Last Name:</td>
-						<td>{{input type="text" value=lastname}}</td>
-					</tr>
-					<tr>
-						<td>Address:</td>
-						<td>{{input type="text" value=address}}</td>
-					</tr>
-					<tr>
-						<td>Address (line 2):</td>
-						<td>{{input type="text" value=addressLine2}}</td>
-					</tr>
-					<tr>
-						<td>City:</td>
-						<td>{{input type="text" value=city}}</td>
-					</tr>
-					<tr>
-						<td>State:</td>
-						<td>{{input type="text" value=state}}</td>
-					</tr>
-					<tr>
-						<td>Zip:</td>
-						<td>{{input type="text" value=zip}}</td>
-					</tr>
-					<tr>
-						<td>Phone:</td>
-						<td>{{input type="text" value=phone}}</td>
-					</tr>
-					<tr>
-						<td>Fax:</td>
-						<td>{{input type="text" value=fax}}</td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td>{{input type="text" value=email}}</td>
-					</tr>
-					</table>
-				</div>
-
-				<div>
-					<figure>
-						<img src="images/bertmug.gif" alt=""/>
-						<figcaption>David Whiteside</figcaption>
-					</figure>
-				</div>
-
-			</section>
-
-			<section class="data-container">
-
-				<div>
-					<figure>
-						<img src="images/bertmug.gif" alt=""/>
-						<figcaption>From Front</figcaption>
-					</figure>
-				</div>
-
-				<div>
-					<figure>
-						<img src="images/bertmug.gif" alt=""/>
-						<figcaption>From Side</figcaption>
-					</figure>
-				</div>
-
-			</section>
-			-->
+  				<div class="row">
+  					<div class="medium-6 column">
+  						<label>Phone</label>
+  						{{input type="text" value=phone}}
+  					</div>
+  					<div class="medium-6 column">
+  						<label>Email</label>
+  						{{input type="text" value=email}}
+  					</div>
+  				</div>
+  			</div>
+  			<div class="medium-4 column">
+  				<img src="images/bertmug.gif" alt=""/>
+  				<figcaption>David Whiteside</figcaption>
+  			</div>
+  		</div>
 
 		</script>
 
@@ -399,22 +342,6 @@
 							<div class="medium-3 column"><label>W:</label>{{input class="small-box" type="text" value=westSF}}</div>
 						</div>
 
-						<!--
-						<table>
-						<tr>
-							<td>E:</td>
-							<td>{{input class="small-box" type="text" value=eastSF}}</td>
-							<td>N:</td>
-							<td>{{input class="small-box" type="text" value=northSF}}</td>
-							<td>S:</td>
-							<td>{{input class="small-box" type="text" value=southSF}}</td>
-							<td>W:</td>
-							<td>{{input class="small-box" type="text" value=westSF}}</td>
-						</tr>
-						</table>
-						-->
-
-
 						<p class="question">
 						What is the conditioned square footing in the house?
 						</p>
@@ -475,13 +402,13 @@
 
 			Habu.Router.map(function() {
 				this.resource('informational', function() {
-					this.resource('air-conditioning');
-					this.resource('heating');
-					this.resource('indoor-air-quality');
-					this.resource('about-us');
-					this.resource('our-products');
-					this.resource('how-it-works');
-					this.resource('solutions');
+					this.resource('informational.air-conditioning');
+					this.resource('informational.heating');
+					this.resource('informational.indoor-air-quality');
+					this.resource('informational.about-us');
+					this.resource('informational.our-products');
+					this.resource('informational.how-it-works');
+					this.resource('informational.solutions');
 				});
 				this.resource('body', function() {
 					this.resource('info');
@@ -509,7 +436,7 @@
 				actions: {
 					submit: function() {
 						console.log('submitting...');
-						this.transitionToRoute('body');
+						this.transitionToRoute('informational');
 					}
 				}
 			});
